@@ -5,7 +5,7 @@ public class MyWorld extends World {
     Label scoreLabel;
     
     public MyWorld() {
-        super(600, 400, 1);
+        super(600, 400, 1, false);
         
         //create the elephant object
         Elephant elephant = new Elephant();
@@ -16,6 +16,14 @@ public class MyWorld extends World {
         addObject(scoreLabel, 50, 50);
         
         createApple();
+    }
+    
+    /**
+     * end the game and draw "GameOver"
+     */
+    public void gameOver() {
+        Label gameOverLabel = new Label ("Game Over", 100);
+        addObject(gameOverLabel, 300, 200);
     }
     
     /**
